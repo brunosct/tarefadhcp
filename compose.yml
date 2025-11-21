@@ -39,7 +39,8 @@ services:
       - NET_ADMIN
     entrypoint: "bash -c /sbin/entrypoint.sh"
     volumes:
-      - ./ned/dhcp4.json:/etc/kea/kea-dhcp4.conf
+      - ./ned/dhcp4.jsonc:/etc/kea/kea-dhcp4.conf
+      - ./ned/dhcp-ddns.jsonc:/etc/kea/kea-dhcp-ddns.conf
       # - ./ned/dhcp:/var/lib/kea 
       - ./ned/entrypoint.sh:/sbin/entrypoint.sh
   
@@ -107,7 +108,7 @@ services:
     cap_add:
       - NET_ADMIN
     command: >
-      sh -c "sleep 10 && ip addr flush dev eth0 && dhclient -v eth0 && sleep infinity"          
+      sh -c "sleep 10 && ip a flush dev eth0 && dhclient -v eth0 && sleep infinity"          
   cliente10:
     build: ./cliente
     hostname: cliente10
