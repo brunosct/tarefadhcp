@@ -31,7 +31,7 @@
                             "ip-address": "192.168.10.11"
                         }
                     ]
-                },
+                }, 
                 {
                     "name": "targaryen.lan.",
                     "key-name": "chave-xogo-de-tronos",
@@ -40,7 +40,7 @@
                             "ip-address": "192.168.10.11"
                         }
                     ]
-                }
+                }                               
             ]
         },
         "reverse-ddns": {
@@ -71,7 +71,7 @@
                             "ip-address": "192.168.10.11"
                         }
                     ]
-                }
+                }                                                 
             ]
         }
     }
