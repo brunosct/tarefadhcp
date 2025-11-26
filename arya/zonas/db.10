@@ -1,12 +1,15 @@
-$TTL 86400
-@       IN      SOA     arya.stark.lan. admin.stark.lan. (
-                        2025011801 ; Serial
-                        3600       ; Refresh
-                        1800       ; Retry
-                        604800     ; Expire
-                        86400 )    ; Minimum
-
-@        IN      NS      arya.stark.lan.
-
-; Servidor principal
-11      IN      PTR     arya.stark.lan.
+$TTL 86400	; 1 day
+10.168.192.in-addr.arpa. IN SOA	arya.stark.lan. admin.stark.lan. (
+				2025011806 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	arya.stark.lan.
+$TTL 600	; 10 minutes
+102.10.168.192.in-addr.arpa. PTR client1.stark.lan.
+			DHCID	( AAAB5P+dPp+6GSfC9F52DnKIrxoH3mUfgwGXaIjUI704
+				R0s= ) ; 0 1 32
+$TTL 86400	; 1 day
+11.10.168.192.in-addr.arpa. PTR	arya.stark.lan.

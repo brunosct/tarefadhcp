@@ -1,10 +1,13 @@
-$TTL 86400
-@       IN      SOA     arya.lannister.lan. admin.lannister.lan. (
-                        2025011801 ; Serial
-                        3600       ; Refresh
-                        1800       ; Retry
-                        604800     ; Expire
-                        86400 )    ; Minimum
-
-@        IN      NS      arya.lannister.lan.
-
+$TTL 86400	; 1 day
+11.168.192.in-addr.arpa. IN SOA	arya.lannister.lan. admin.lannister.lan. (
+				2025011802 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	arya.lannister.lan.
+$TTL 600	; 10 minutes
+30.11.168.192.in-addr.arpa. PTR	cliente10.lannister.lan.
+			DHCID	( AAABW6qRlWjhZBoCiCq31iBUxPUcgyVphNabIXBaTNYV
+				tFc= ) ; 0 1 32
